@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: helpdesk-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: POWER_AUTOMATE_WEBHOOK_URL
+        sync: false
